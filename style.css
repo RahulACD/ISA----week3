@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;1,700&family=PT+Sans&display=swap');
+
+body {
+  background-color: #41B3A3;
+  overflow: hidden;
+  margin: 0;
+}
+
+.main-container {
+  width: 60vw;
+  height: 80vh;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-small-wrapper {
+  background-color: #208376;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: lighter;
+  color: white;
+  margin: 0;
+  padding: 0.5em;
+}
+
+.status-head-wrapper {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-head-wrapper h1 {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 4em;
+  margin: 0;
+  color:rgb(220, 13, 117);
+}
+
+.game-button-wrapper {
+  grid-row-start: 3;
+  grid-column: 1/span 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  margin: 0;
+  color: #FFF;
+  background-color: #208376;
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-radius: 5px;
+  padding: 1em 2em;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 1em;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+button:hover,
+button:active {
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.move-display {
+  grid-row-start: 4;
+  grid-column: 1/span 3;
+  color: white;
+  font-family: 'PT Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    width: 80vw;
+    height: 90vh;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  .status-head-wrapper h1 {
+    font-size: 2.5em;
+  }
+
+  button {
+    padding: 0.8em 1.6em;
+    font-size: 0.8em;
+  }
+}
